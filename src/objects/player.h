@@ -10,8 +10,8 @@ namespace GoBallGo
 		float y;
 		float h;
 		float w;
-		float speedX;
 		float speedY;
+		float jump;
 
 		bool isAlive;
 		bool isWinner;
@@ -25,6 +25,7 @@ namespace GoBallGo
 	const float PLAYER_WIDTH = 45.0f;
 	const float PLAYER_HEIGHT = 45.0f;
 	const float MAX_PLAYER_SPEED = 100.0f;
+	const float PLAYER_JUMP_FORCE = 50.0f;
 
 	Player initPlayer();
 	void playerMovment(Player& player);
