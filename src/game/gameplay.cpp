@@ -15,15 +15,13 @@ namespace GoBallGo
 
 		while (!WindowShouldClose())
 		{
-			//FPS
-#ifdef _DEBUG
-			DrawFPS(0, 0);
-#endif _DEBUG
-
 			//Update
-			
+			playerMovment(player);
+			playerScreenCollision(player);
 			//start Draw
 			BeginDrawing();
+
+			DrawRectangleLines(static_cast<int>(player.x), static_cast<int>(player.y), static_cast<int>(player.w), static_cast<int>(player.h), RED);
 
 			ClearBackground(BLACK);
 
