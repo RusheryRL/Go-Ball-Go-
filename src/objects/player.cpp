@@ -18,7 +18,6 @@ namespace GoBallGo
 		player.speedX = MAX_PLAYER_SPEED;
 		player.speedY = MAX_PLAYER_SPEED;
 		player.isAlive = true;
-		player.isWinner = false;
 		player.currentPlayerLives = MAX_PLAYER_POINTS;
 		player.points = 0;
 

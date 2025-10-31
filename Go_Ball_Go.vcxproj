@@ -22,11 +22,13 @@
     <ClCompile Include="src\game\gameplay.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\objects\player.cpp" />
+    <ClCompile Include="src\objects\wall.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\game\gameplay.h" />
     <ClInclude Include="src\game\windowManagment.h" />
     <ClInclude Include="src\objects\player.h" />
+    <ClInclude Include="src\objects\wall.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
