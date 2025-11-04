@@ -2,6 +2,8 @@
 
 #include "raylib.h"
 
+#include <iostream>
+
 #include "game/windowManagment.h"
 #include "game/gameplay.h"
 
@@ -17,7 +19,7 @@ namespace GoBallGo
 		player.w = PLAYER_WIDTH;
 		player.h = PLAYER_HEIGHT;
 		player.speedY = MAX_PLAYER_SPEED;
-		player.jump = PLAYER_JUMP_FORCE;
+		player.jump = MAX_PLAYER_JUMP_FORCE;
 		player.isAlive = true;
 		player.currentPlayerLives = MAX_PLAYER_POINTS;
 		player.points = 0;
@@ -27,10 +29,20 @@ namespace GoBallGo
 
 	void playerMovment(Player& player)
 	{
-		if (IsKeyDown(KEY_W))
+
+		if (IsKeyPressed(KEY_W))
+		{
 			player.y -= player.jump * GetFrameTime();
+			cout << player.jump << endl;
+		}
 		else
-			player.y += Gforce * GetFrameTime();
+		{
+			player.y += G_FORCE * GetFrameTime();
+		}
+
+		player.jump -= G_FORCE * GetFrameTime();
+
+		playerClamp(player);
 	}
 	void playerScreenCollision(Player& player)
 	{
@@ -38,5 +50,17 @@ namespace GoBallGo
 			player.y = 0.0f;
 		if (player.y + player.h >= GetScreenHeight())
 			player.isAlive = false;
+	}
+	void playerClamp(Player& player)
+	{
+		if (player.jump <= MAX_PLAYER_JUMP_FORCE)
+		{
+			player.jump = MAX_PLAYER_JUMP_FORCE;
+		}
+		
+		if (player.jump >= MAX_PLAYER_JUMP_FORCE)
+		{
+			player.jump = MAX_PLAYER_JUMP_FORCE;
+		}
 	}
 }

@@ -14,7 +14,7 @@ namespace GoBallGo
 	};
 
 	const float DISTANCE_BETWEEN_WALLS = 60.0f;
-	const float WALL_SPEED = 200.0f;
+	const float WALL_SPEED = 250.0f;
 
 	Wall initWall();
 	void wallMovement(Wall& wall);
