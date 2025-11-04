@@ -9,7 +9,7 @@ namespace GoBallGo
 		Wall wall;
 
 		wall.x = static_cast<float>(GetScreenWidth());
-		wall.y = static_cast<float>(GetRandomValue(static_cast<int>(PLAYER_WIDTH) * 2, (GetScreenHeight() - static_cast<int>(PLAYER_WIDTH) * 2)));
+		wall.y = static_cast<float>(GetRandomValue(static_cast<int>(PLAYER_HEIGHT) * 2, GetScreenHeight()));
 		wall.h = static_cast<float>(GetScreenHeight());
 		wall.w = PLAYER_WIDTH / 1.5f;
 		wall.speedX = WALL_SPEED;
@@ -25,7 +25,7 @@ namespace GoBallGo
 		if (wall.x + wall.w <= 0.0f)
 		{
 			wall.x = static_cast<float>(GetScreenWidth());
-			wall.y = static_cast<float>(GetRandomValue(static_cast<int>(PLAYER_WIDTH) * 2, (GetScreenHeight() - static_cast<int>(PLAYER_WIDTH) * 2)));
+			wall.y = static_cast<float>(GetRandomValue(static_cast<int>(PLAYER_HEIGHT) * 2, GetScreenHeight()));
 		}
 	}
 	void wallPlayerCollision(Wall wall, Player& player)
@@ -53,11 +53,7 @@ namespace GoBallGo
 			if (i % 2 == 0)
 			{
 				wall[i].y = 0.0f;
-
-				if (bottomWallTopWallCollision(wall[i], wall[i - 1]))
-				{
-					wall[i].h = wall[i - 1].h - PLAYER_HEIGHT;
-				}
+				wall[i].h = wall[i-1].y - (wall[i-1].y - PLAYER_HEIGHT * 2);
 			}
 		}
 	}
