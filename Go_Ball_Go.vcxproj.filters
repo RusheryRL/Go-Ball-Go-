@@ -39,6 +39,18 @@
     <ClCompile Include="src\objects\wall.cpp">
       <Filter>Resource Files\Objects</Filter>
     </ClCompile>
+    <ClCompile Include="src\objects\buttons.cpp">
+      <Filter>Resource Files\Objects</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\windowManagment.cpp">
+      <Filter>Resource Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\menu.cpp">
+      <Filter>Resource Files\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="src\game\credits.cpp">
+      <Filter>Resource Files\Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\objects\player.h">
@@ -52,6 +64,15 @@
     </ClInclude>
     <ClInclude Include="src\objects\wall.h">
       <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\objects\buttons.h">
+      <Filter>Header Files\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\menu.h">
+      <Filter>Header Files\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="src\game\credits.h">
+      <Filter>Header Files\Game</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

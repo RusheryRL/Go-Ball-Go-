@@ -1,10 +1,10 @@
-#include "game/gameplay.h"
+#include "game/menu.h"
 
 using namespace GoBallGo;
 
 int main()
 {
-	GameRun();
+	openMenu();
 
 	return 0;
 }

@@ -8,12 +8,9 @@
 
 namespace GoBallGo
 {
-	void GameRun()
+	void gameRun()
 	{
-		InitWindow(screenWidth, screenHeight, "Go! Ball Go!");
-		//Inits
-		const int versionTextX = GetScreenWidth() - 65;
-		const int versionTextY = GetScreenHeight() - 15;
+		//init
 		Player player = initPlayer();
 		Wall wall[MAX_WALLS_IN_SCREEN] = {};
 
@@ -30,16 +27,13 @@ namespace GoBallGo
 			wallUpdate(wall, player);
 			//start Draw
 			BeginDrawing();
+			ClearBackground(BLACK);
 			DrawRectangleLines(static_cast<int>(player.x), static_cast<int>(player.y), static_cast<int>(player.w), static_cast<int>(player.h), RED);
 			drawWall(wall);
-			DrawText("Ver: 0.1", versionTextX, versionTextY, 15, WHITE);
-			ClearBackground(BLACK);
 
 			//end Draw
 			EndDrawing();
 		}
-
-		//De-Init
 		CloseWindow();
 	}
 }

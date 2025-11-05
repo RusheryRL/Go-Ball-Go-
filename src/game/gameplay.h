@@ -4,7 +4,7 @@
 
 namespace GoBallGo
 {
-	void GameRun();
+	void gameRun();
 
 	const float G_FORCE = 98.0f;
 }

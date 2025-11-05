@@ -19,14 +19,21 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\game\credits.cpp" />
     <ClCompile Include="src\game\gameplay.cpp" />
+    <ClCompile Include="src\game\menu.cpp" />
+    <ClCompile Include="src\game\windowManagment.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\objects\buttons.cpp" />
     <ClCompile Include="src\objects\player.cpp" />
     <ClCompile Include="src\objects\wall.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\game\credits.h" />
     <ClInclude Include="src\game\gameplay.h" />
+    <ClInclude Include="src\game\menu.h" />
     <ClInclude Include="src\game\windowManagment.h" />
+    <ClInclude Include="src\objects\buttons.h" />
     <ClInclude Include="src\objects\player.h" />
     <ClInclude Include="src\objects\wall.h" />
   </ItemGroup>
