@@ -1,0 +1,1 @@
+xcopy res bin\x64\Release /e /i /y

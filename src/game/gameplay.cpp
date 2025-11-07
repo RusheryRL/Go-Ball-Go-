@@ -28,9 +28,9 @@ namespace GoBallGo
 		while (!WindowShouldClose() && player.isAlive)
 		{
 			//Background Update
-			scrollingBack -= 0.1f;
-			scrollingMid -= 0.5f;
-			scrollingFore -= 1.0f;
+			scrollingBack -= 10.0f * GetFrameTime();
+			scrollingMid -= 50.0f * GetFrameTime();
+			scrollingFore -= 100.0f * GetFrameTime();
 
 			if (scrollingBack <= -backGround.width * 2) scrollingBack = 0;
 			if (scrollingMid <= -midGround.width * 2) scrollingMid = 0;
