@@ -38,7 +38,7 @@ namespace GoBallGo
 
 			//start Draw
 			BeginDrawing();
-			DrawText("Ver: 0.2", versionTextX, versionTextY, 15, WHITE);
+			DrawText("Ver: 0.3", versionTextX, versionTextY, 15, WHITE);
 			DrawRectangle(static_cast<int>(playButton.x), static_cast<int>(playButton.y), static_cast<int>(playButton.w), static_cast<int>(playButton.h), GREEN);
 			DrawRectangle(static_cast<int>(creditsButton.x), static_cast<int>(creditsButton.y), static_cast<int>(creditsButton.w), static_cast<int>(creditsButton.h), YELLOW);
 			DrawRectangle(static_cast<int>(exitButton.x), static_cast<int>(exitButton.y), static_cast<int>(exitButton.w), static_cast<int>(exitButton.h), RED);
